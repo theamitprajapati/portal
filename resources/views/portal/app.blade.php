@@ -23,7 +23,7 @@
     <link href="{{ asset('assets/global/plugins/maps-amcharts/ammap/ammap.css') }}" rel="stylesheet">
     <!-- END PAGE STYLE -->
     <script  src="{{ asset('assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
-
+    <link href="{{ asset('assets/global/plugins/datatables/dataTables.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -79,7 +79,7 @@
                     <li class="nav-parent">
                         <a href="#"><i class="icon-puzzle"></i><span>Users</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a target="_blank" href=""> User</a></li>
+                            <li><a href="user"> User</a></li>
                             <li><a href="profile"> Profile</a></li>
                         </ul>
                     </li>
@@ -596,6 +596,11 @@
         <!-- END PAGE SCRIPT -->
         <script  src="{{ asset('assets/admin/md-layout1/material-design/js/material.js') }}"></script>
         <script  src="{{ asset('assets/admin/layout1/js/layout.js') }}"></script>
+        <!-- BEGIN PAGE SCRIPTS -->
+    <script src="{{ asset('assets/global/plugins/datatables/jquery.dataTables.min.js') }}"></script> <!-- Tables Filtering, Sorting & Editing -->
+    <script src="{{ asset('assets/global/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/global/js/pages/table_dynamic.js') }}"></script>
+    <!-- END PAGE SCRIPTS -->
         <script>
       $.material.init();
     </script>

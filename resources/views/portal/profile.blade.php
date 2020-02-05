@@ -18,7 +18,7 @@
             <div class="col-md-12">
               <div class="panel panel-default no-bd">
                 <div class="panel-header bg-dark">
-                  <h2 class="panel-title"><strong>Sign Up</strong> to our website</h2>
+                  <h3 class="panel-title"><strong>Sign Up</strong> to our website</h3>
                 </div>
                 <div class="panel-body bg-white">
                   <div class="row">

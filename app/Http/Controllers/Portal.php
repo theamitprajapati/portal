@@ -30,6 +30,6 @@ class Portal extends Controller
 
     public function user()
     {
-        return redirect('portal/user');
+        return view('portal/user');
     }
 }

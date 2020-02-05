@@ -1,541 +1,690 @@
 @extends('portal.app')
 
 @section('content')
-<div class="page-content page-thin">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="md-alert alert alert-info alert-dismissible fade in" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
-                <div class="media-body width-100p">
-                    <p class="md-title">Material Design template</p>
-                    <div class="md-txt">
-                        <p>Material design is based upon the material design principle developed by Google. It's made with Bootstrap and Jquery.</p>
-                        <p>Want to learn more? Here is Google website: <a href="https://www.google.com/design/spec/material-design/introduction.html#" target="_blank">Google Material Design</a></p>
-                        <p class="m-t-20"><strong>What's new with Material Design? Here are main new features:</strong></p>
-                        <ul>
-                            <li>New Form Elements: <a href="material-forms.html">See material design form</a></li>
-                            <li>New Buttons: <a href="material-buttons.html">See material design buttons</a></li>
-                            <li>New Cards: <a href="material-cards.html">See material design cards</a></li>
-                            <li>New Icons Set: <a href="material-icons.html">See material design icons</a></li>
-                            <li>New Sliders: <a href="material-sliders.html">See material design sliders</a></li>
-                            <li>New Colors: <a href="material-colors.html">See material design colors</a></li>
-                        </ul>
-                    </div>
-                    <div class="md-image">
-                        <img src="../assets/global/images/various/material-design.png" class="dis-block" alt="material design">
-                    </div>
-                </div>
+<div class="page-content">
+          <div class="header">
+            <h2>Tables <strong>Dynamic</strong></h2>
+            <div class="breadcrumb-wrapper">
+              <ol class="breadcrumb">
+                <li><a href="dashboard.html">Make</a>
+                </li>
+                <li><a href="tables.html">Tables</a>
+                </li>
+                <li class="active">Tables Dynamic</li>
+              </ol>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xlg-7 col-lg-7">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel bg-dark widget-map">
-                        <div class="panel-header">
-                            <h3><i class="icon-globe-alt"></i> <strong>Interactif</strong> Map</h3>
-                        </div>
-                        <div class="panel-content widget-full">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="map"></div>
-                                </div>
-                                <div class="col-md-3 c-white">
-                                    <div id="listdiv"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 portlets">
+              <div class="panel">
+                <div class="panel-header bg-dark md-panel-controls">
+                  <h3><i class="fa fa-table"></i> <strong>Sorting </strong> table</h3>
                 </div>
-            </div>
-        </div>
-        <div class="col-xlg-3 col-lg-5 col-visitors">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel no-bd bd-3 panel-stat">
-                        <div class="panel-header">
-                            <h3><i class="icon-graph"></i> <strong>Visitors</strong> Statistic</h3>
-                            <div class="control-btn">
-                                <a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a>
-                            </div>
-                        </div>
-                        <div class="panel-body p-15 p-b-0">
-                            <div class="row m-b-10">
-                                <div class="col-xs-3 big-icon">
-                                    <i class="icon-users"></i>
-                                </div>
-                                <div class="col-xs-9">
-                                    <div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="60">
-                                        <div>
-                                            <small class="stat-title">Visits today</small>
-                                            <h1 class="f-40 m-0 w-300">25 610</h1>
-                                        </div>
-                                        <div>
-                                            <small class="stat-title">Visits yesterday</small>
-                                            <h1 class="f-40 m-0 w-300">22 420</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <small class="stat-title">New Visitors</small>
-                                    <div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="23">
-                                        <div>
-                                            <h3 class="f-20 m-0 w-300">37.5%</h3>
-                                        </div>
-                                        <div>
-                                            <h3 class="f-20 m-0 w-300">34.2%</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <small class="stat-title">Bounce Rate</small>
-                                    <div class="live-tile f-right" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="23">
-                                        <div>
-                                            <h3 class="f-20 t-right m-0 w-500">5.6%</h3>
-                                        </div>
-                                        <div>
-                                            <h3 class="f-20 t-right m-0 w-500">7.4%</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-stat-chart">
-                            <canvas id="visitors-chart"></canvas>
-                        </div>
-                    </div>
+                <div class="panel-content pagination2 table-responsive">
+                  <table class="table table-hover table-dynamic">
+                    <thead>
+                      <tr>
+                        <th>Rendering engine</th>
+                        <th>Browser</th>
+                        <th>Platform(s)</th>
+                        <th>Engine version</th>
+                        <th>CSS grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 4.0</td>
+                        <td>Win 95+</td>
+                        <td>4</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 5.0</td>
+                        <td>Win 95+</td>
+                        <td>5</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 5.5</td>
+                        <td>Win 95+</td>
+                        <td>5.5</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 6</td>
+                        <td>Win 98+</td>
+                        <td>6</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 7</td>
+                        <td>Win XP SP2+</td>
+                        <td>7</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>AOL browser (AOL desktop)</td>
+                        <td>Win XP</td>
+                        <td>6</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.7</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 1.5</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 2.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td>1.9</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Camino 1.0</td>
+                        <td>OSX.2+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Camino 1.5</td>
+                        <td>OSX.3+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Netscape 7.2</td>
+                        <td>Win 95+ / Mac OS 8.6-9.2</td>
+                        <td>1.7</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Netscape Browser 8</td>
+                        <td>Win 98SE+</td>
+                        <td>1.7</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Netscape Navigator 9</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.0</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.1</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.1</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.2</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.2</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.3</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.3</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.4</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.4</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.5</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.5</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.6</td>
+                        <td>Win 95+ / OSX.1+</td>
+                        <td>1.6</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.7</td>
+                        <td>Win 98+ / OSX.1+</td>
+                        <td>1.7</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Mozilla 1.8</td>
+                        <td>Win 98+ / OSX.1+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Seamonkey 1.1</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td>1.8</td>
+                        <td>A</td>
+                      </tr>
+                      <tr class="gradeC">
+                        <td>Tasman</td>
+                        <td>Internet Explorer 5.1</td>
+                        <td>Mac OS 7.6-9</td>
+                        <td>1</td>
+                        <td>C</td>
+                      </tr>
+                      <tr class="gradeC">
+                        <td>Tasman</td>
+                        <td>Internet Explorer 5.2</td>
+                        <td>Mac OS 8-X</td>
+                        <td>1</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>NetFront 3.1</td>
+                        <td>Embedded devices</td>
+                        <td>-</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>NetFront 3.4</td>
+                        <td>Embedded devices</td>
+                        <td>-</td>
+                        <td>A</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>Dillo 0.8</td>
+                        <td>Embedded devices</td>
+                        <td>-</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>Links</td>
+                        <td>Text only</td>
+                        <td>-</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>Lynx</td>
+                        <td>Text only</td>
+                        <td>-</td>
+                        <td>X</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>IE Mobile</td>
+                        <td>Windows Mobile 6</td>
+                        <td>-</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Misc</td>
+                        <td>PSP browser</td>
+                        <td>PSP</td>
+                        <td>-</td>
+                        <td>C</td>
+                      </tr>
+                      <tr>
+                        <td>Other browsers</td>
+                        <td>All others</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>U</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
             </div>
-            <div class="row" style="display:none">
-                <div class="col-md-12">
-                    <div class="panel no-bd bd-3 panel-stat">
-                        <div class="panel-body bg-red p-15">
-                            <div class="row m-b-10">
-                                <div class="col-xs-3 big-icon">
-                                    <i class="icon-equalizer"></i>
-                                </div>
-                                <div class="col-xs-9">
-                                    <small class="stat-title">ORDERS THIS MONTH</small>
-                                    <div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="56">
-                                        <div>
-                                            <h1 class="f-40 m-0 w-300">148</h1>
-                                        </div>
-                                        <div>
-                                            <h1 class="f-40 m-0 w-300">+28%</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <small class="stat-title">Last month</small>
-                                    <div class="live-tile" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="23">
-                                        <div>
-                                            <h3 class="f-20 m-0 w-300">126</h3>
-                                        </div>
-                                        <div>
-                                            <h3 class="f-20 m-0 w-300">$12,545</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-6">
-                                    <small class="stat-title">Last week</small>
-                                    <div class="live-tile f-right" data-mode="carousel" data-direction="vertical" data-delay="3500" data-height="23">
-                                        <div>
-                                            <h3 class="t-right f-20 m-0 w-500">43</h3>
-                                        </div>
-                                        <div>
-                                            <h3 class="t-right f-20 m-0 w-500">$4,237</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xlg-2 hidden-lg col-clock">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="jquery-clock small" data-jquery-clock="">
-                        <li class="jquery-clock-pin"></li>
-                        <li class="jquery-clock-sec"></li>
-                        <li class="jquery-clock-min"></li>
-                        <li class="jquery-clock-hour"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="widget-progress-bar">
-                        <div class="progress">
-                            <progress class="progress-bar-primary stat1" value="82" max="100" data-animation-delay="600"></progress>
-                            <div class="progress-info">
-                                <span class="progress-name">Profil Complete</span>
-                                <span class="progress-value">82%</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <progress class="progress-bar-primary stat1" value="43" max="100" data-animation-delay="800"></progress>
-                            <div class="progress-info">
-                                <span class="progress-name">Answer Emails</span>
-                                <span class="progress-value">43%</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <progress class="progress-bar-primary stat1" value="93" max="100" data-animation-delay="1000"></progress>
-                            <div class="progress-info">
-                                <span class="progress-name">Server availability</span>
-                                <span class="progress-value">93%</span>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <progress class="progress-bar-primary stat1" value="76" max="100" data-animation-delay="1200"></progress>
-                            <div class="progress-info">
-                                <span class="progress-name">CPU Usage</span>
-                                <span class="progress-value">76%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xlg-4 col-financial-stocks">
-            <div class="panel">
+          </div>
+          <div class="row">
+            <div class="col-lg-12 portlets">
+              <div class="panel">
                 <div class="panel-header md-panel-controls">
-                    <h3><i class="icon-graph"></i> <strong>Financial</strong> Stock</h3>
-                </div>
-                <div class="panel-content widget-full widget-stock stock1">
-                    <div class="tabs tabs-linetriangle">
-                        <ul class="nav nav-tabs nav-4">
-                            <li class="lines-3">
-                                <a href="#microsoft-tab" id="microsoft" data-toggle="tab">
-                                    <span class="title">Microsoft</span>
-                                    <span class="c-gray"><strong>23.32</strong></span>
-                                    <span class="c-green">+6.214%</span>
-                                </a>
-                            </li>
-                            <li class="active lines-3">
-                                <a href="#sony-tab" id="sony" data-toggle="tab">
-                                    <span class="title">Sony</span>
-                                    <span class="c-gray"><strong>23.32</strong></span>
-                                    <span class="c-red">-8.425%</span>
-                                </a>
-                            </li>
-                            <li class="lines-3">
-                                <a href="#samsung-tab" id="samsung" data-toggle="tab">
-                                    <span class="title">Samsung</span>
-                                    <span class="c-gray"><strong>23.32</strong></span>
-                                    <span class="c-green">+2.035%</span>
-                                </a>
-                            </li>
-                            <li class="lines-3">
-                                <a href="#apple-tab" id="apple" data-toggle="tab">
-                                    <span class="title">Apple</span>
-                                    <span class="c-gray"><strong>23.32</strong></span>
-                                    <span class="c-green">+1.245%</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane" id="microsoft-tab">
-                                <div id="stock-microsoft"></div>
-                            </div>
-                            <div class="tab-pane active" id="sony-tab">
-                                <div id="stock-sony"></div>
-                            </div>
-                            <div class="tab-pane" id="samsung-tab">
-                                <div id="stock-samsung"></div>
-                            </div>
-                            <div class="tab-pane" id="apple-tab">
-                                <div id="stock-apple"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xlg-2 col-small-stats">
-            <div class="row">
-                <div class="col-xlg-12 col-lg-4 col-sm-4">
-                    <div class="panel">
-                        <div class="panel-content widget-small bg-green">
-                            <div class="title">
-                                <h1>Virgin Mobile</h1>
-                                <p>Last month trending</p>
-                                <span>-8.452%</span>
-                            </div>
-                            <div class="content">
-                                <div id="stock-virgin-sm"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xlg-12 col-lg-4 col-sm-4">
-                    <div class="panel">
-                        <div class="panel-content widget-small bg-purple">
-                            <div class="title">
-                                <h1>Ebay Inc</h1>
-                                <p>Last month trending</p>
-                                <span>+2.124%</span>
-                            </div>
-                            <div class="content">
-                                <div id="stock-ebay-sm"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xlg-12 col-lg-4 col-sm-4">
-                    <div class="panel">
-                        <div class="panel-content widget-small bg-primary">
-                            <div class="title">
-                                <h1>Facebook Corp.</h1>
-                                <p>Last month trending</p>
-                                <span>+1.054%</span>
-                            </div>
-                            <div class="content">
-                                <div id="stock-facebook-sm"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xlg-6">
-            <div class="panel">
-                <div class="panel-content widget-full widget-stock stock2">
-                    <div class="tab_right">
-                        <ul class="nav nav-tabs">
-                            <li class="lines-3">
-                                <a href="#yahoo-tab" id="yahoo" data-toggle="tab" data-color="green" data-value="+6.214%">
-                                    <div class="clearfix">
-                                        <span class="title pull-left">YHOO</span>
-                                        <span class="pull-right">Yahoo Inc</span>
-                                    </div>
-                                    <div class="clearfix">
-                                        <span class="c-gray pull-left"><strong>23.32</strong></span>
-                                        <span class="c-green pull-right">+6.214%</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="lines-3 active">
-                                <a href="#google-tab" id="google" data-toggle="tab" data-color="red" data-value="-8.425%">
-                                    <div class="clearfix">
-                                        <span class="title pull-left">GOOG</span>
-                                        <span class="pull-right">Google Inc</span>
-                                    </div>
-                                    <div class="clearfix">
-                                        <span class="c-gray pull-left"><strong>22.32</strong></span>
-                                        <span class="c-red pull-right">-8.425%</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="lines-3">
-                                <a href="#nokia-tab" id="nokia" data-toggle="tab" data-color="green" data-value="+2.035%">
-                                    <div class="clearfix">
-                                        <span class="title pull-left">NOK</span>
-                                        <span class="pull-right">Nokia Inc</span>
-                                    </div>
-                                    <div class="clearfix">
-                                        <span class="c-gray pull-left"><strong>25.32</strong></span>
-                                        <span class="c-green pull-right">+2.035%</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="lines-3">
-                                <a href="#htc-tab" id="htc" data-toggle="tab" data-color="red" data-value="-1.052%">
-                                    <div class="clearfix">
-                                        <span class="title pull-left">HTC</span>
-                                        <span class="pull-right">HTC Inc</span>
-                                    </div>
-                                    <div class="clearfix">
-                                        <span class="c-gray pull-left"><strong>18.96</strong></span>
-                                        <span class="c-red pull-right">-1.052%</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="title-stock">
-                                <h1>Google Inc</h1>
-                                <span class="c-red">-8.425%</span>
-                            </div>
-                            <div class="tab-pane" id="yahoo-tab" style="display:none">
-                                <div id="stock-yahoo"></div>
-                                <div class="company-info">Yahoo! Inc. is an American multinational Internet corporation headquartered in Sunnyvale, California. It is globally known for its Web portal, search engine Yahoo Search, and related services.</div>
-                            </div>
-                            <div class="tab-pane active" id="google-tab">
-                                <div id="stock-google"></div>
-                                <div class="company-info">Google is a United States-headquartered, multinational corporation specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, and software.</div>
-                            </div>
-                            <div class="tab-pane" id="nokia-tab" style="display:none">
-                                <div id="stock-nokia"></div>
-                                <div class="company-info">Nokia is a Finnish multinational communications and information technology company. Nokia employed 90,000 people across 120 countries, conducts sales in more than 150 countries and reported annual revenues of around €12.7 billion.</div>
-                            </div>
-                            <div class="tab-pane" id="htc-tab" style="display:none">
-                                <div id="stock-htc"></div>
-                                <div class="company-info">HTC Corporation is a Taiwanese manufacturer of smartphones and tablets. Founded in 1997, HTC began designing and manufacturing devices such as mobile phones, touchscreen phones, and PDAs based on Windows Mobile OS.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-6 portlets">
-            <div class="panel">
-                <div class="panel-header md-panel-controls">
-                    <h3><i class="icon-list"></i> <strong>Todo</strong> List</h3>
+                  <h3><i class="fa fa-table"></i> <strong>Hiding </strong> columns</h3>
                 </div>
                 <div class="panel-content">
-                    <ul class="todo-list md-todo ui-sortable">
-                        <li class="high">
-                            <div class="checkbox checkbox-primary">
-                                <label>
-                                    <input id="task-1" type="checkbox" name="r-primary" value="option1" class="md-checkbox">
-                                    <span class="todo-task">Send email to Bob Linch</span>
-                                </label>
-                            </div>
-                            <div class="todo-date clearfix">
-                                <div class="completed-date"></div>
-                                <div class="due-date">Due on <span class="due-date-span">15 December 2014</span></div>
-                            </div>
-                            <span class="todo-options pull-right">
-                                <a href="javascript:;" class="todo-delete"><i class="icons-office-52"></i></a>
-                            </span>
-                            <div class="todo-tags pull-right">
-                                <div class="label label-success">Work</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox checkbox-primary">
-                                <label>
-                                    <input id="task-2" type="checkbox" name="r-primary" value="option1" class="md-checkbox">
-                                    <span class="todo-task">Call datacenter for servers</span>
-                                </label>
-                            </div>
-                            <div class="todo-date clearfix">
-                                <div class="completed-date"></div>
-                                <div class="due-date">Due on <span class="due-date-span">7 January</span></div>
-                            </div>
-                            <span class="todo-options pull-right">
-                                <a href="javascript:;" class="todo-delete"><i class="icons-office-52"></i></a>
-                            </span>
-                        </li>
-                        <li class="low">
-                            <div class="checkbox checkbox-primary">
-                                <label>
-                                    <input id="task-3" type="checkbox" name="r-primary" value="option1" class="md-checkbox">
-                                    <span class="todo-task">Remove all unused icons</span>
-                                </label>
-                            </div>
-                            <div class="todo-date clearfix">
-                                <div class="completed-date"></div>
-                                <div class="due-date">Due on <span class="due-date-span">5 January</span></div>
-                            </div>
-                            <span class="todo-options pull-right">
-                                <a href="javascript:;" class="todo-delete"><i class="icons-office-52"></i></a>
-                            </span>
-                        </li>
-                        <li class="medium">
-                            <div class="checkbox checkbox-primary">
-                                <label>
-                                    <input id="task-4" type="checkbox" name="r-primary" value="option1" class="md-checkbox">
-                                    <span class="todo-task">Read my todo list</span>
-                                </label>
-                            </div>
-                            <div class="todo-date clearfix">
-                                <div class="completed-date"></div>
-                                <div class="due-date">Due on <span class="due-date-span">4 January</span></div>
-                            </div>
-                            <span class="todo-options pull-right">
-                                <a href="javascript:;" class="todo-delete"><i class="icons-office-52"></i></a>
-                            </span>
-                            <div class="todo-tags pull-right">
-                                <div class="label label-info">Tuesday</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="checkbox checkbox-primary">
-                                <label>
-                                    <input id="task-6" type="checkbox" name="r-primary" value="option1" class="md-checkbox">
-                                    <span class="todo-task">Have a breakfeast before 12</span>
-                                </label>
-                            </div>
-                            <div class="todo-date clearfix">
-                                <div class="completed-date"></div>
-                                <div class="due-date">Due on <span class="due-date-span">1 January</span></div>
-                            </div>
-                            <span class="todo-options pull-right">
-                                <a href="javascript:;" class="todo-delete"><i class="icons-office-52"></i></a>
-                            </span>
-                        </li>
-                    </ul>
-                    <div class="clearfix m-t-10">
-                        <div class="pull-left">
-                            <button type="button" class="btn btn-sm btn-default check-all-tasks">Check All Done</button>
-                        </div>
-                        <div class="pull-right">
-                            <button type="button" class="btn btn-sm btn-dark add-task md-task">Add Task</button>
-                        </div>
-                    </div>
+                  <table class="table dataTable" id="table2">
+                    <thead>
+                      <tr>
+                        <th class="no_sort" tabindex="0" rowspan="1" colspan="1" style="width: 42px;"></th>
+                        <th class="sorting_asc" tabindex="0" rowspan="1" colspan="1" style="width: 279px;">
+                          Rendering engine
+                        </th>
+                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 350px;">
+                          Browser
+                        </th>
+                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 322px;">
+                          Platform(s)
+                        </th>
+                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 241px;">
+                          Engine version
+                        </th>
+                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 171px;">
+                          CSS grade
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody role="alert" aria-live="polite" aria-relevant="all">
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Firefox 1.0</td>
+                        <td class=" ">Win 98+ / OSX.2+</td>
+                        <td class="center ">1.7</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Firefox 1.5</td>
+                        <td class=" ">Win 98+ / OSX.2+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Firefox 2.0</td>
+                        <td class=" ">Win 98+ / OSX.2+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Firefox 3.0</td>
+                        <td class=" ">Win 2k+ / OSX.3+</td>
+                        <td class="center ">1.9</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Camino 1.0</td>
+                        <td class=" ">OSX.2+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Camino 1.5</td>
+                        <td class=" ">OSX.3+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Netscape 7.2</td>
+                        <td class=" ">Win 95+ / Mac OS 8.6-9.2</td>
+                        <td class="center ">1.7</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Netscape Browser 8</td>
+                        <td class=" ">Win 98SE+</td>
+                        <td class="center ">1.7</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Netscape Navigator 9</td>
+                        <td class=" ">Win 98+ / OSX.2+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.0</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.1</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.1</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.2</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.2</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.3</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.3</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.4</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.4</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.5</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.5</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.6</td>
+                        <td class=" ">Win 95+ / OSX.1+</td>
+                        <td class="center ">1.6</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.7</td>
+                        <td class=" ">Win 98+ / OSX.1+</td>
+                        <td class="center ">1.7</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Mozilla 1.8</td>
+                        <td class=" ">Win 98+ / OSX.1+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Seamonkey 1.1</td>
+                        <td class=" ">Win 98+ / OSX.2+</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Gecko</td>
+                        <td class=" ">Epiphany 2.20</td>
+                        <td class=" ">Gnome</td>
+                        <td class="center ">1.8</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeC odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">KHTML</td>
+                        <td class=" ">Konqureror 3.1</td>
+                        <td class=" ">KDE 3.1</td>
+                        <td class="center ">3.1</td>
+                        <td class="center ">C</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">KHTML</td>
+                        <td class=" ">Konqureror 3.3</td>
+                        <td class=" ">KDE 3.3</td>
+                        <td class="center ">3.3</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">KHTML</td>
+                        <td class=" ">Konqureror 3.5</td>
+                        <td class=" ">KDE 3.5</td>
+                        <td class="center ">3.5</td>
+                        <td class="center ">A</td>
+                      </tr>
+                      <tr class="gradeA even">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Misc</td>
+                        <td class=" ">NetFront 3.1</td>
+                        <td class=" ">Embedded devices</td>
+                        <td class="center ">-</td>
+                        <td class="center ">C</td>
+                      </tr>
+                      <tr class="gradeA odd">
+                        <td class="center "></td>
+                        <td class=" sorting_1">Misc</td>
+                        <td class=" ">NetFront 3.4</td>
+                        <td class=" ">Embedded devices</td>
+                        <td class="center ">-</td>
+                        <td class="center ">A</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portlets">
-            <div class="panel widget-weather"></div>
-            <div class="panel widget-member clearfix">
-                <div class="col-xs-3">
-                    <img src="../assets/global/images/avatars/user2.png" alt="avatar 12" class="pull-left img-responsive">
-                </div>
-                <div class="col-xs-9">
-                    <h3 class="m-t-0 member-name"><strong>John Snow</strong></h3>
-                    <p class="member-job">Software Engineer</p>
-                    <div class="row">
-                        <div class="col-xlg-6">
-                            <p><i class="icon-envelope c-gray-light p-r-10"></i> cameso@it.com</p>
-                            <p><i class="fa fa-facebook c-gray-light p-r-10"></i> fb.com/jsnow</p>
-                        </div>
-                        <div class="col-xlg-6 align-right">
-                            <p><i class="icon-calendar c-gray-light p-r-10"></i> 6 may 2014</p>
-                            <p><i class="icon-target c-gray-light p-r-10"></i> New York</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6 portlets">
-            <div class="widget widget_calendar bg-dark">
-                <div class="multidatepicker"></div>
-            </div>
-            <div class="panel m-t-0">
+          </div>
+          <div class="row">
+            <div class="col-lg-12 portlets">
+              <div class="panel">
                 <div class="panel-header md-panel-controls">
-                    <h3><i class="icon-basket"></i> <strong>Sales</strong> Volume Stats</h3>
+                  <h3><i class="fa fa-table"></i> <strong>Export Tools</strong> options <small>export to Excel, CSV, PDF or Print.</small></h3>
                 </div>
-                <div class="panel-content p-t-0 p-b-0">
-                    <div id="bar-chart"></div>
+                <div class="panel-content">
+                  <div class="filter-left">
+                    <table class="table table-dynamic table-tools">
+                      <thead>
+                        <tr>
+                          <th>Rendering engine</th>
+                          <th>Browser</th>
+                          <th class='hidden-350'>Platform(s)</th>
+                          <th class='hidden-1024'>Engine version</th>
+                          <th class='hidden-480'>CSS grade</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Trident</td>
+                          <td>
+                            Internet Explorer 4.0
+                          </td>
+                          <td class='hidden-350'>Win 95+</td>
+                          <td class='hidden-1024'>4</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Presto</td>
+                          <td>Nokia N800</td>
+                          <td class='hidden-350'>N800</td>
+                          <td class='hidden-1024'>1.8</td>
+                          <td class='hidden-480'>A</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>NetFront 3.4</td>
+                          <td class='hidden-350'>Embedded devices</td>
+                          <td class='hidden-1024'>1.7</td>
+                          <td class='hidden-480'>A</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Dillo 0.8</td>
+                          <td class='hidden-350'>Embedded devices</td>
+                          <td class='hidden-1024'>1.5</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Links</td>
+                          <td class='hidden-350'>Text only</td>
+                          <td class='hidden-1024'>1.8</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Lynx</td>
+                          <td class='hidden-350'>Text only</td>
+                          <td class='hidden-1024'>1.9</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>IE Mobile</td>
+                          <td class='hidden-350'>Windows Mobile 6</td>
+                          <td class='hidden-1024'>1.4</td>
+                          <td class='hidden-480'>C</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>PSP browser</td>
+                          <td class='hidden-350'>PSP</td>
+                          <td class='hidden-1024'>1.6</td>
+                          <td class='hidden-480'>C</td>
+                        </tr>
+                        <tr>
+                          <td>Other browsers</td>
+                          <td>All others</td>
+                          <td class='hidden-350'>-</td>
+                          <td class='hidden-1024'>1.5</td>
+                          <td class='hidden-480'>U</td>
+                        </tr>
+                        <tr>
+                          <td>Trident</td>
+                          <td>
+                            Internet Explorer 4.0
+                          </td>
+                          <td class='hidden-350'>Win 95+</td>
+                          <td class='hidden-1024'>4</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Presto</td>
+                          <td>Nokia N800</td>
+                          <td class='hidden-350'>N800</td>
+                          <td class='hidden-1024'>-</td>
+                          <td class='hidden-480'>A</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>NetFront 3.4</td>
+                          <td class='hidden-350'>Embedded devices</td>
+                          <td class='hidden-1024'>-</td>
+                          <td class='hidden-480'>A</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Dillo 0.8</td>
+                          <td class='hidden-350'>Embedded devices</td>
+                          <td class='hidden-1024'>1.5</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Links</td>
+                          <td class='hidden-350'>Text only</td>
+                          <td class='hidden-1024'>1.6</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>Lynx</td>
+                          <td class='hidden-350'>Text only</td>
+                          <td class='hidden-1024'>1.7</td>
+                          <td class='hidden-480'>X</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>IE Mobile</td>
+                          <td class='hidden-350'>Windows Mobile 6</td>
+                          <td class='hidden-1024'>1.4</td>
+                          <td class='hidden-480'>C</td>
+                        </tr>
+                        <tr>
+                          <td>Misc</td>
+                          <td>PSP browser</td>
+                          <td class='hidden-350'>PSP</td>
+                          <td class='hidden-1024'>1.6</td>
+                          <td class='hidden-480'>C</td>
+                        </tr>
+                        <tr>
+                          <td>Other browsers</td>
+                          <td>All others</td>
+                          <td class='hidden-350'>-</td>
+                          <td class='hidden-1024'>1.9</td>
+                          <td class='hidden-480'>U</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="copyright">
-            <p class="pull-left sm-pull-reset">
+          </div>
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
                 <span>Copyright <span class="copyright">©</span> 2016 </span>
                 <span>THEMES LAB</span>.
                 <span>All rights reserved. </span>
-            </p>
-            <p class="pull-right sm-pull-reset">
+              </p>
+              <p class="pull-right sm-pull-reset">
                 <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-            </p>
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
 @endsection
