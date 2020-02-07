@@ -906,8 +906,8 @@ $(document).ready(function () {
     timepicker();
     datepicker();
     bDatepicker();
-    multiDatesPicker();
-    datetimepicker();
+    //multiDatesPicker();
+    //datetimepicker();
     rating();
     magnificPopup();
     editorSummernote();

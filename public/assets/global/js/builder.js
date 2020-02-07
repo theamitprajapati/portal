@@ -266,10 +266,10 @@ $(document).ready(function() {
     builderScroll();
     handleLayout();
     handleTheme();
-    handleCookie();
+    //handleCookie();
     mainColor();
     backgroundColor();
-    resetStyle();
+    //resetStyle();
 
     if($('body').hasClass('sidebar-top')){
       destroySideScroll();

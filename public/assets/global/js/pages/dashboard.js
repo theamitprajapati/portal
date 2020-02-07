@@ -4129,10 +4129,10 @@ $(function() {
             }]
         });
     }
-    stockCharts('sony');
-    $('.stock1 .nav-tabs a').on('click', function() {
-        stockCharts($(this).attr('id'));
-    });
+    // stockCharts('sony');
+    // $('.stock1 .nav-tabs a').on('click', function() {
+    //     stockCharts($(this).attr('id'));
+    // });
 
     function stockCharts2(tabName) {
         var items = Array(data1, data2, data3, data4);
@@ -4182,24 +4182,24 @@ $(function() {
             }]
         });
     }
-    stockCharts2('google');
-    stockCharts2('yahoo');
-    stockCharts2('htc');
-    stockCharts2('nokia');
-    $('.stock2 .nav-tabs a').on('click', function() {
-        $('.stock2 .tab-content .tab-pane.active').fadeOut(300, function() {
-            $('.stock2 .tab-content .tab-pane.active').fadeIn(300);
-        });
-        var current_stock = $(this).attr('id');
-        var current_value = $(this).data('value');
-        var current_color = $(this).data('color');
-        title = current_stock.toLowerCase().replace(/\b[a-z]/g, function(letter) {
-            return letter.toUpperCase();
-        });
-        $('.title-stock h1').text(title + ' Inc');
-        $('.title-stock span').removeClass().addClass('c-' + current_color).text(current_value);
-        stockCharts2(current_stock);
-    });
+    // stockCharts2('google');
+    // stockCharts2('yahoo');
+    // stockCharts2('htc');
+    // stockCharts2('nokia');
+    // $('.stock2 .nav-tabs a').on('click', function() {
+    //     $('.stock2 .tab-content .tab-pane.active').fadeOut(300, function() {
+    //         $('.stock2 .tab-content .tab-pane.active').fadeIn(300);
+    //     });
+    //     var current_stock = $(this).attr('id');
+    //     var current_value = $(this).data('value');
+    //     var current_color = $(this).data('color');
+    //     title = current_stock.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+    //         return letter.toUpperCase();
+    //     });
+    //     $('.title-stock h1').text(title + ' Inc');
+    //     $('.title-stock span').removeClass().addClass('c-' + current_color).text(current_value);
+    //     stockCharts2(current_stock);
+    // });
 
     /**** Small Financial Widget ****/
     function smallStockCharts(tabName, dataNumber) {
@@ -4268,9 +4268,9 @@ $(function() {
             }]
         });
     }
-    smallStockCharts('virgin', 2);
-    smallStockCharts('ebay', 3);
-    smallStockCharts('facebook', 1);
+    // smallStockCharts('virgin', 2);
+    // smallStockCharts('ebay', 3);
+    // smallStockCharts('facebook', 1);
 
     /* Notifications, demo purpose */
     notifContent = '<div class="alert alert-dark media fade in bd-0" id="message-alert"><div class="media-left"><img src="../assets/global/images/profil_page/friend8.jpg" class="dis-block img-circle"></div><div class="media-body width-100p"><h4 class="alert-title f-14">New message received</h4><p class="f-12 alert-message pull-left">John send you a message 2 hours ago.</p><p class="pull-right"><a href="#" class="f-12">Read message</a></p></div></div>';
@@ -4283,56 +4283,56 @@ $(function() {
     var items = Array(data1, data2, data3, data4);
     var randomData = items[Math.floor(Math.random() * items.length)];
 
-    $('#bar-chart').highcharts('StockChart', {
-        chart: {
-            alignTicks: false,
-            height: 130,
-            borderColor: '#C9625F',
-            backgroundColor: 'transparent',
-            spacingTop: 0,
-            spacingBottom: 5,
-            spacingLeft: 0,
-            spacingRight: 0
-        },
-        rangeSelector: {
-            inputEnabled: false,
-            selected: 2
-        },
-        credits: {
-            enabled: false
-        },
-        exporting: {
-            enabled: false
-        },
-        scrollbar: {
-            enabled: false
-        },
-        navigator: {
-            enabled: false
-        },
-        colors: ['rgba(128, 133, 233,0.8)'],
-        xAxis: {
-            lineColor: '#e1e1e1',
-            tickColor: '#EFEFEF'
-        },
-        yAxis: {
-            gridLineColor: '#e1e1e1'
-        },
-        series: [{
-            type: 'column',
-            name: 'Sales Volume',
-            data: randomData,
-            dataGrouping: {
-                units: [[
-                    'week', // unit name
-                    [1] // allowed multiples
-                ], [
-                    'month',
-                    [1, 2, 3, 4, 6]
-                ]]
-            }
-        }]
-    });
+    // $('#bar-chart').highcharts('StockChart', {
+    //     chart: {
+    //         alignTicks: false,
+    //         height: 130,
+    //         borderColor: '#C9625F',
+    //         backgroundColor: 'transparent',
+    //         spacingTop: 0,
+    //         spacingBottom: 5,
+    //         spacingLeft: 0,
+    //         spacingRight: 0
+    //     },
+    //     rangeSelector: {
+    //         inputEnabled: false,
+    //         selected: 2
+    //     },
+    //     credits: {
+    //         enabled: false
+    //     },
+    //     exporting: {
+    //         enabled: false
+    //     },
+    //     scrollbar: {
+    //         enabled: false
+    //     },
+    //     navigator: {
+    //         enabled: false
+    //     },
+    //     colors: ['rgba(128, 133, 233,0.8)'],
+    //     xAxis: {
+    //         lineColor: '#e1e1e1',
+    //         tickColor: '#EFEFEF'
+    //     },
+    //     yAxis: {
+    //         gridLineColor: '#e1e1e1'
+    //     },
+    //     series: [{
+    //         type: 'column',
+    //         name: 'Sales Volume',
+    //         data: randomData,
+    //         dataGrouping: {
+    //             units: [[
+    //                 'week', // unit name
+    //                 [1] // allowed multiples
+    //             ], [
+    //                 'month',
+    //                 [1, 2, 3, 4, 6]
+    //             ]]
+    //         }
+    //     }]
+    // });
 
     $('*[data-jquery-clock]').each(function() {
         var t = $(this);
