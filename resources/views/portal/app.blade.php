@@ -24,6 +24,8 @@
     <!-- END PAGE STYLE -->
     <!-- <script  src="{{ asset('assets/global/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script> -->
     <!-- <link href="{{ asset('assets/global/plugins/datatables/dataTables.min.css') }}" rel="stylesheet"> -->
+    <script>function base_url(url=''){return '<?php  echo URL::to('/');?>/'+url; }</script>
+
     @stack('css')
 </head>
 
@@ -41,7 +43,7 @@
             </div>
             <div class="sidebar-inner">
                 <div class="sidebar-top" style="display: none;">
-                    <form action="http://themes-lab.com/make/admin/md-layout1/search-result.html" method="post" class="searchform" id="search-results">
+                    <form action="#" method="post" class="searchform" id="search-results">
                         <input type="text" class="form-control" name="keyword" placeholder="Search...">
                     </form>
                     <div class="userlogged clearfix">
@@ -79,120 +81,47 @@
                     <li class="nav-parent">
                         <a href="#"><i class="icon-puzzle"></i><span>Users</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a href="user"> User</a></li>
-                            <li><a href="profile"> Profile</a></li>
+                            <li><a href="user?grid=table">All Users</a></li>
+                            <li><a href="user?grid=form"> New User</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-parent">
-                        <a href="#"><i class="icon-puzzle"></i><span>Builder</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="icon-puzzle"></i><span>Package</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a target="_blank" href="http://themes-lab.com/make/admin-builder/index.html"> Admin</a></li>
-                            <li><a href="page-builder/index.html"> Page</a></li>
-                            <li><a href="ecommerce-pricing-table.html"> Pricing Table</a></li>
+                            <li><a href="user">All Package</a></li>
+                            <li><a href="profile"> New Package</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-parent">
-                        <a href="#"><i class="icon-bulb"></i><span>Mailbox</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="icon-puzzle"></i><span>Modules</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a href="mailbox.html"> Inbox</a></li>
-                            <li><a href="mailbox-send.html"> Send Email</a></li>
+                            <li><a href="user">All Modules</a></li>
+                            <li><a href="profile"> New Modules</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-parent">
-                        <a href="#"><i class="icon-screen-desktop"></i><span>UI Elements</span> <span class="fa arrow"></span></a>
+                        <a href="#"><i class="icon-puzzle"></i><span>Features</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a href="material-buttons.html"> Material Buttons</a></li>
-                            <li><a href="material-colors.html"> Material Colors</a></li>
-                            <li><a href="material-cards.html"> Material Cards</a></li>
-                            <li><a href="material-icons.html"> Material Icons</a></li>
-                            <li><a href="ui-icons.html"> Normal Icons</a></li>
-                            <li><a href="ui-components.html"> Components</a></li>
-                            <li><a href="ui-tabs.html"> Tabs</a></li>
-                            <li><a href="ui-animations.html"> Animations CSS3</a></li>
-                            <li><a href="ui-nestable-list.html"> Nestable List</a></li>
-                            <li><a href="ui-tree-view.html"> Tree View</a></li>
-                            <li><a href="ui-modals.html"> Modals</a></li>
-                            <li><a href="ui-notifications.html"> Notifications</a></li>
-                            <li><a href="ui-typography.html"> Typography</a></li>
+                            <li><a href="user">All Features</a></li>
+                            <li><a href="profile"> Active Features</a></li>
+                            <li><a href="profile"> Inactive Features</a></li>
                         </ul>
                     </li>
+
+
                     <li class="nav-parent">
-                        <a href="#"><i class="icon-layers"></i><span>Layouts</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="icon-puzzle"></i><span>Plugins</span> <span class="fa arrow"></span></a>
                         <ul class="children collapse">
-                            <li><a href="layouts-api.html"> Layout API</a></li>
-                            <li><a href="layout-topbar-menu.html"> Topbar Menu</a></li>
-                            <li><a href="layout-topbar-mega-menu.html"> Topbar Mega Menu</a></li>
-                            <li><a href="layout-topbar-mega-menu-dark.html"> Topbar Mega Dark</a></li>
-                            <li><a href="layout-sidebar-hover.html"> Sidebar on Hover</a></li>
-                            <li><a href="layout-submenu-hover.html"> Sidebar Submenu Hover</a></li>
-                            <li><a href="layout-boxed.html"> Boxed Layout</a></li>
+                            <li><a href="user">All Plugin</a></li>
+                            <li><a href="profile"> Active Plugins</a></li>
+                            <li><a href="profile"> Inactive Plugin</a></li>
                         </ul>
                     </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-note"></i><span>Forms </span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="material-forms.html">Material Design Form</a></li>
-                            <li><a href="forms-validation.html"> Forms Validation</a></li>
-                            <li><a href="forms-plugins.html"> Advanced Plugins</a></li>
-                            <li><a href="forms-wizard.html"> <span class="pull-right badge badge-danger">low</span> <span>Form Wizard</span></a></li>
-                            <li><a href="material-sliders.html"> Material Sliders</a></li>
-                            <li><a href="forms-editors.html"> Text Editors</a></li>
-                            <li><a href="forms-input-masks.html"> Input Masks</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="fa fa-table"></i><span>Tables</span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="tables.html"> Tables Styling</a></li>
-                            <li><a href="tables-dynamic.html"> Tables Dynamic</a></li>
-                            <li><a href="tables-filter.html"> Tables Filter</a></li>
-                            <li><a href="tables-editable.html"> Tables Editable</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-bar-chart"></i><span>Charts </span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="charts.html"> Charts</a></li>
-                            <li><a href="charts-finance.html"> Financial Charts</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-picture"></i><span>Medias</span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="medias-image-croping.html"> Images Croping</a></li>
-                            <li><a href="medias-gallery-sortable.html"> Gallery Sortable</a></li>
-                            <li><a href="medias-hover-effects.html"> <span class="pull-right badge badge-primary">12</span> Hover Effects</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-docs"></i><span>Pages </span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="page-timeline.html"> Timeline</a></li>
-                            <li><a href="page-404.html"> Error 404</a></li>
-                            <li><a href="page-500.html"> Error 500</a></li>
-                            <li><a href="page-blank.html"> Blank Page</a></li>
-                            <li><a href="page-contact.html"> Contact</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-user"></i><span>User </span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="user-profil.html"> <span class="pull-right badge badge-danger">Hot</span> Profil</a></li>
-                            <li><a href="user-lockscreen.html"> Lockscreen</a></li>
-                            <li><a href="user-login-v1.html"> Login / Register</a></li>
-                            <li><a href="user-login-v2.html"> Login / Register v2</a></li>
-                            <li><a href="user-session-timeout.html"> Session Timeout</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-parent">
-                        <a href="#"><i class="icon-basket"></i><span>eCommerce </span><span class="fa arrow"></span></a>
-                        <ul class="children collapse">
-                            <li><a href="ecommerce-cart.html"> Shopping Cart</a></li>
-                            <li><a href="ecommerce-invoice.html"> Invoice</a></li>
-                            <li><a href="ecommerce-pricing-table.html"><span class="pull-right badge badge-success">5</span> Pricing Table</a></li>
-                        </ul>
-                    </li>
+
+
                     <li class="nav-parent">
                         <a href="#"><i class="icon-cup"></i><span>Extra </span><span class="fa arrow"></span></a>
                         <ul class="children collapse">
@@ -245,7 +174,7 @@
                         <!-- BEGIN USER DROPDOWN -->
                         <li class="dropdown" id="user-header">
                             <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img src="{{ asset('assets/global/images/avatars/user1.png')}}" alt="user image">
+                                <img src="{{ asset('assets/global/images/avatars/user1.png')}}" id="imLogo" name="imLogo" alt="phpMyAdmin" border="0">
                                 <span class="username">Hi, John Doe</span>
                             </a>
                             <ul class="dropdown-menu">
@@ -264,16 +193,29 @@
                             </ul>
                         </li>
                         <!-- END USER DROPDOWN -->
-
                     </ul>
                 </div>
                 <!-- header-right -->
             </div>
 
-
-
-            @yield('content')
-
+            <div class="page-content">
+                <div class="header">
+                    <h2>Tables <strong>Dynamic</strong></h2>
+                    <div class="breadcrumb-wrapper">
+                        <ol class="breadcrumb">
+                            <li><a href="dashboard.html">Make</a>
+                            </li>
+                            <li><a href="tables.html">Tables</a>
+                            </li>
+                            <li class="active">Tables Dynamic</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- <div class="row" id="form-content"></div>
+                <div class="row" id="table-content"></div>
+                <div class="row" id="view-content"></div> -->
+                @yield('content')
+            </div>
             <!-- BEGIN SEARCH -->
 
             <!-- END SEARCH -->
@@ -287,7 +229,7 @@
             </div>
 
             <script src="{{ asset('assets/global/plugins/jquery/jquery-3.1.0.min.js') }}"></script>
-            <script src="{{ asset('assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js') }}"></script>
+            <script src="{{ asset('assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js?ver=3.0') }}"></script>
             <!-- <script  src="{{ asset('assets/global/plugins/jquery-ui/jquery-ui.min.js') }}"></script> -->
             <!-- <script  src="{{ asset('assets/global/plugins/gsap/main-gsap.min.js') }}"></script> -->
             <!-- <script  src="{{ asset('assets/global/plugins/tether/js/tether.min.js') }}"></script> -->
@@ -367,6 +309,7 @@
     <script src="{{ asset('assets/global/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/global/js/pages/table_dynamic.js') }}"></script> -->
             <!-- END PAGE SCRIPTS -->
+            <script src="{{ asset('handler.js') }}"></script>
             @stack('scripts')
             <script>
                 //   $.material.init();

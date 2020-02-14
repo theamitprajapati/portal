@@ -1,0 +1,6 @@
+elixir(function(mix) {
+    mix.styles([
+        'normalize.css',
+        'main.css'
+    ]);
+});

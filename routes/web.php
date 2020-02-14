@@ -15,11 +15,9 @@ Route::get('/', function () {
     return redirect('login');
 });
 
-
 Route::group(['prefix' => 'portal'], function() {
     Route::get('dashboard','Portal@index');
-    Route::get('profile','Portal@profile');
-    Route::get('user','Portal@user');
+    Route::get('user','User@index');
 });
 
 Route::get('Welcome','Welcome@index');

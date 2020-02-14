@@ -1,690 +1,412 @@
 @extends('portal.app')
 
 @section('content')
-<div class="page-content">
-          <div class="header">
-            <h2>Tables <strong>Dynamic</strong></h2>
-            <div class="breadcrumb-wrapper">
-              <ol class="breadcrumb">
-                <li><a href="dashboard.html">Make</a>
-                </li>
-                <li><a href="tables.html">Tables</a>
-                </li>
-                <li class="active">Tables Dynamic</li>
-              </ol>
-            </div>
-          </div>
+<?php if ($grid == 'form') { ?>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default no-bd">
+        <div class="panel-header bg-dark">
+          <h3 class="panel-title"><strong>Sign Up</strong> to our website</h3>
+        </div>
+        <div class="panel-body bg-white">
           <div class="row">
-            <div class="col-lg-12 portlets">
-              <div class="panel">
-                <div class="panel-header bg-dark md-panel-controls">
-                  <h3><i class="fa fa-table"></i> <strong>Sorting </strong> table</h3>
-                </div>
-                <div class="panel-content pagination2 table-responsive">
-                  <table class="table table-hover table-dynamic">
-                    <thead>
-                      <tr>
-                        <th>Rendering engine</th>
-                        <th>Browser</th>
-                        <th>Platform(s)</th>
-                        <th>Engine version</th>
-                        <th>CSS grade</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td>4</td>
-                        <td>X</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.5</td>
-                        <td>Win 95+</td>
-                        <td>5.5</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 6</td>
-                        <td>Win 98+</td>
-                        <td>6</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 7</td>
-                        <td>Win XP SP2+</td>
-                        <td>7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>AOL browser (AOL desktop)</td>
-                        <td>Win XP</td>
-                        <td>6</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 1.5</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 2.0</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Firefox 3.0</td>
-                        <td>Win 2k+ / OSX.3+</td>
-                        <td>1.9</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.0</td>
-                        <td>OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Camino 1.5</td>
-                        <td>OSX.3+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape 7.2</td>
-                        <td>Win 95+ / Mac OS 8.6-9.2</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Browser 8</td>
-                        <td>Win 98SE+</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Netscape Navigator 9</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.0</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.1</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.1</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.2</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.2</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.3</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.3</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.4</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.4</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.5</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.5</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.6</td>
-                        <td>Win 95+ / OSX.1+</td>
-                        <td>1.6</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.7</td>
-                        <td>Win 98+ / OSX.1+</td>
-                        <td>1.7</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Mozilla 1.8</td>
-                        <td>Win 98+ / OSX.1+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Gecko</td>
-                        <td>Seamonkey 1.1</td>
-                        <td>Win 98+ / OSX.2+</td>
-                        <td>1.8</td>
-                        <td>A</td>
-                      </tr>
-                      <tr class="gradeC">
-                        <td>Tasman</td>
-                        <td>Internet Explorer 5.1</td>
-                        <td>Mac OS 7.6-9</td>
-                        <td>1</td>
-                        <td>C</td>
-                      </tr>
-                      <tr class="gradeC">
-                        <td>Tasman</td>
-                        <td>Internet Explorer 5.2</td>
-                        <td>Mac OS 8-X</td>
-                        <td>1</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>NetFront 3.1</td>
-                        <td>Embedded devices</td>
-                        <td>-</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>NetFront 3.4</td>
-                        <td>Embedded devices</td>
-                        <td>-</td>
-                        <td>A</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>Dillo 0.8</td>
-                        <td>Embedded devices</td>
-                        <td>-</td>
-                        <td>X</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>Links</td>
-                        <td>Text only</td>
-                        <td>-</td>
-                        <td>X</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>Lynx</td>
-                        <td>Text only</td>
-                        <td>-</td>
-                        <td>X</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>IE Mobile</td>
-                        <td>Windows Mobile 6</td>
-                        <td>-</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>Misc</td>
-                        <td>PSP browser</td>
-                        <td>PSP</td>
-                        <td>-</td>
-                        <td>C</td>
-                      </tr>
-                      <tr>
-                        <td>Other browsers</td>
-                        <td>All others</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>U</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12 portlets">
-              <div class="panel">
-                <div class="panel-header md-panel-controls">
-                  <h3><i class="fa fa-table"></i> <strong>Hiding </strong> columns</h3>
-                </div>
-                <div class="panel-content">
-                  <table class="table dataTable" id="table2">
-                    <thead>
-                      <tr>
-                        <th class="no_sort" tabindex="0" rowspan="1" colspan="1" style="width: 42px;"></th>
-                        <th class="sorting_asc" tabindex="0" rowspan="1" colspan="1" style="width: 279px;">
-                          Rendering engine
-                        </th>
-                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 350px;">
-                          Browser
-                        </th>
-                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 322px;">
-                          Platform(s)
-                        </th>
-                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 241px;">
-                          Engine version
-                        </th>
-                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 171px;">
-                          CSS grade
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody role="alert" aria-live="polite" aria-relevant="all">
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Firefox 1.0</td>
-                        <td class=" ">Win 98+ / OSX.2+</td>
-                        <td class="center ">1.7</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Firefox 1.5</td>
-                        <td class=" ">Win 98+ / OSX.2+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Firefox 2.0</td>
-                        <td class=" ">Win 98+ / OSX.2+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Firefox 3.0</td>
-                        <td class=" ">Win 2k+ / OSX.3+</td>
-                        <td class="center ">1.9</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Camino 1.0</td>
-                        <td class=" ">OSX.2+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Camino 1.5</td>
-                        <td class=" ">OSX.3+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Netscape 7.2</td>
-                        <td class=" ">Win 95+ / Mac OS 8.6-9.2</td>
-                        <td class="center ">1.7</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Netscape Browser 8</td>
-                        <td class=" ">Win 98SE+</td>
-                        <td class="center ">1.7</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Netscape Navigator 9</td>
-                        <td class=" ">Win 98+ / OSX.2+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.0</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.1</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.1</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.2</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.2</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.3</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.3</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.4</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.4</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.5</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.5</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.6</td>
-                        <td class=" ">Win 95+ / OSX.1+</td>
-                        <td class="center ">1.6</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.7</td>
-                        <td class=" ">Win 98+ / OSX.1+</td>
-                        <td class="center ">1.7</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Mozilla 1.8</td>
-                        <td class=" ">Win 98+ / OSX.1+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Seamonkey 1.1</td>
-                        <td class=" ">Win 98+ / OSX.2+</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Gecko</td>
-                        <td class=" ">Epiphany 2.20</td>
-                        <td class=" ">Gnome</td>
-                        <td class="center ">1.8</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeC odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">KHTML</td>
-                        <td class=" ">Konqureror 3.1</td>
-                        <td class=" ">KDE 3.1</td>
-                        <td class="center ">3.1</td>
-                        <td class="center ">C</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">KHTML</td>
-                        <td class=" ">Konqureror 3.3</td>
-                        <td class=" ">KDE 3.3</td>
-                        <td class="center ">3.3</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">KHTML</td>
-                        <td class=" ">Konqureror 3.5</td>
-                        <td class=" ">KDE 3.5</td>
-                        <td class="center ">3.5</td>
-                        <td class="center ">A</td>
-                      </tr>
-                      <tr class="gradeA even">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Misc</td>
-                        <td class=" ">NetFront 3.1</td>
-                        <td class=" ">Embedded devices</td>
-                        <td class="center ">-</td>
-                        <td class="center ">C</td>
-                      </tr>
-                      <tr class="gradeA odd">
-                        <td class="center "></td>
-                        <td class=" sorting_1">Misc</td>
-                        <td class=" ">NetFront 3.4</td>
-                        <td class=" ">Embedded devices</td>
-                        <td class="center ">-</td>
-                        <td class="center ">A</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12 portlets">
-              <div class="panel">
-                <div class="panel-header md-panel-controls">
-                  <h3><i class="fa fa-table"></i> <strong>Export Tools</strong> options <small>export to Excel, CSV, PDF or Print.</small></h3>
-                </div>
-                <div class="panel-content">
-                  <div class="filter-left">
-                    <table class="table table-dynamic table-tools">
-                      <thead>
-                        <tr>
-                          <th>Rendering engine</th>
-                          <th>Browser</th>
-                          <th class='hidden-350'>Platform(s)</th>
-                          <th class='hidden-1024'>Engine version</th>
-                          <th class='hidden-480'>CSS grade</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Trident</td>
-                          <td>
-                            Internet Explorer 4.0
-                          </td>
-                          <td class='hidden-350'>Win 95+</td>
-                          <td class='hidden-1024'>4</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Presto</td>
-                          <td>Nokia N800</td>
-                          <td class='hidden-350'>N800</td>
-                          <td class='hidden-1024'>1.8</td>
-                          <td class='hidden-480'>A</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>NetFront 3.4</td>
-                          <td class='hidden-350'>Embedded devices</td>
-                          <td class='hidden-1024'>1.7</td>
-                          <td class='hidden-480'>A</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Dillo 0.8</td>
-                          <td class='hidden-350'>Embedded devices</td>
-                          <td class='hidden-1024'>1.5</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Links</td>
-                          <td class='hidden-350'>Text only</td>
-                          <td class='hidden-1024'>1.8</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Lynx</td>
-                          <td class='hidden-350'>Text only</td>
-                          <td class='hidden-1024'>1.9</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>IE Mobile</td>
-                          <td class='hidden-350'>Windows Mobile 6</td>
-                          <td class='hidden-1024'>1.4</td>
-                          <td class='hidden-480'>C</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>PSP browser</td>
-                          <td class='hidden-350'>PSP</td>
-                          <td class='hidden-1024'>1.6</td>
-                          <td class='hidden-480'>C</td>
-                        </tr>
-                        <tr>
-                          <td>Other browsers</td>
-                          <td>All others</td>
-                          <td class='hidden-350'>-</td>
-                          <td class='hidden-1024'>1.5</td>
-                          <td class='hidden-480'>U</td>
-                        </tr>
-                        <tr>
-                          <td>Trident</td>
-                          <td>
-                            Internet Explorer 4.0
-                          </td>
-                          <td class='hidden-350'>Win 95+</td>
-                          <td class='hidden-1024'>4</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Presto</td>
-                          <td>Nokia N800</td>
-                          <td class='hidden-350'>N800</td>
-                          <td class='hidden-1024'>-</td>
-                          <td class='hidden-480'>A</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>NetFront 3.4</td>
-                          <td class='hidden-350'>Embedded devices</td>
-                          <td class='hidden-1024'>-</td>
-                          <td class='hidden-480'>A</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Dillo 0.8</td>
-                          <td class='hidden-350'>Embedded devices</td>
-                          <td class='hidden-1024'>1.5</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Links</td>
-                          <td class='hidden-350'>Text only</td>
-                          <td class='hidden-1024'>1.6</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>Lynx</td>
-                          <td class='hidden-350'>Text only</td>
-                          <td class='hidden-1024'>1.7</td>
-                          <td class='hidden-480'>X</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>IE Mobile</td>
-                          <td class='hidden-350'>Windows Mobile 6</td>
-                          <td class='hidden-1024'>1.4</td>
-                          <td class='hidden-480'>C</td>
-                        </tr>
-                        <tr>
-                          <td>Misc</td>
-                          <td>PSP browser</td>
-                          <td class='hidden-350'>PSP</td>
-                          <td class='hidden-1024'>1.6</td>
-                          <td class='hidden-480'>C</td>
-                        </tr>
-                        <tr>
-                          <td>Other browsers</td>
-                          <td>All others</td>
-                          <td class='hidden-350'>-</td>
-                          <td class='hidden-1024'>1.9</td>
-                          <td class='hidden-480'>U</td>
-                        </tr>
-                      </tbody>
-                    </table>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <form role="form" class="form-validation">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Firstname</label>
+                      <div class="append-icon">
+                        <input type="text" name="firstname" class="form-control" minlength="3" placeholder="Minimum 3 characters..." required>
+                        <i class="icon-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Lastname</label>
+                      <div class="append-icon">
+                        <input type="text" name="lastname" class="form-control" minlength="4" placeholder="Minimum 4 characters..." required>
+                        <i class="icon-user"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="copyright">
-              <p class="pull-left sm-pull-reset">
-                <span>Copyright <span class="copyright">©</span> 2016 </span>
-                <span>THEMES LAB</span>.
-                <span>All rights reserved. </span>
-              </p>
-              <p class="pull-right sm-pull-reset">
-                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-              </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Email Address</label>
+                      <div class="append-icon">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email..." required>
+                        <i class="icon-envelope"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Choose your language</label>
+                      <div class="option-group">
+                        <select id="language" name="language" class="language" required>
+                          <option value="">Select language...</option>
+                          <option value="EN">English</option>
+                          <option value="FR">French</option>
+                          <option value="SP">Spanish</option>
+                          <option value="CH">Chinese</option>
+                          <option value="JP">Japanese</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Phone Number</label>
+                      <div class="append-icon">
+                        <input type="text" name="mobile" class="form-control" placeholder="Mobile Number..." minlength="3" required>
+                        <i class="icon-screen-smartphone"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Upload your avatar</label>
+                      <div class="file">
+                        <div class="option-group">
+                          <span class="file-button btn-primary">Choose File</span>
+                          <input type="file" class="custom-file" name="avatar" id="avatar" onchange="document.getElementById('uploader').value = this.value;" required>
+                          <input type="text" class="form-control" id="uploader" placeholder="no file selected" readonly="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Password</label>
+                      <div class="append-icon">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Between 4 and 16 characters" minlength="4" maxlength="16" required>
+                        <i class="icon-lock"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Repeat your password</label>
+                      <div class="append-icon">
+                        <input type="password" name="password2" id="password2" class="form-control" placeholder="Must be equal to your first password..." minlength="4" maxlength="16" required>
+                        <i class="icon-lock"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">What's the result of 4 + 8 ?</label>
+                      <input type="text" name="calcul" class="form-control" placeholder="Human verification!">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="control-label">Are you OK with our terms?</label>
+                      <div class="option-group">
+                        <div class="checkbox checkbox-primary">
+                          <label>
+                            <input type="checkbox" name="terms" id="terms" class="md-checkbox" required />
+                            I agree with terms and conditions
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center  m-t-20">
+                  <button type="submit" class="btn btn-embossed btn-primary">Sign Up</button>
+                  <button type="reset" class="cancel btn btn-embossed btn-default m-b-10 m-r-0">Cancel</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+<?php } elseif ($grid == 'table') { ?>
+  <div class="row">
+    <div class="col-lg-12 portlets">
+      <div class="panel">
+        <div class="panel-header bg-dark md-panel-controls">
+          <h3><i class="fa fa-table"></i> <strong>Sorting </strong> table</h3>
+        </div>
+        <div class="panel-content pagination2 table-responsive">
+          <table class="table table-hover table-dynamic">
+            <thead>
+              <tr>
+                <th>Rendering engine</th>
+                <th>Browser</th>
+                <th>Platform(s)</th>
+                <th>Engine version</th>
+                <th>CSS grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Trident</td>
+                <td>Internet Explorer 4.0</td>
+                <td>Win 95+</td>
+                <td>4</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>Trident</td>
+                <td>Internet Explorer 5.0</td>
+                <td>Win 95+</td>
+                <td>5</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>Trident</td>
+                <td>Internet Explorer 5.5</td>
+                <td>Win 95+</td>
+                <td>5.5</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Trident</td>
+                <td>Internet Explorer 6</td>
+                <td>Win 98+</td>
+                <td>6</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Trident</td>
+                <td>Internet Explorer 7</td>
+                <td>Win XP SP2+</td>
+                <td>7</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Trident</td>
+                <td>AOL browser (AOL desktop)</td>
+                <td>Win XP</td>
+                <td>6</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Firefox 1.0</td>
+                <td>Win 98+ / OSX.2+</td>
+                <td>1.7</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Firefox 1.5</td>
+                <td>Win 98+ / OSX.2+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Firefox 2.0</td>
+                <td>Win 98+ / OSX.2+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Firefox 3.0</td>
+                <td>Win 2k+ / OSX.3+</td>
+                <td>1.9</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Camino 1.0</td>
+                <td>OSX.2+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Camino 1.5</td>
+                <td>OSX.3+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Netscape 7.2</td>
+                <td>Win 95+ / Mac OS 8.6-9.2</td>
+                <td>1.7</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Netscape Browser 8</td>
+                <td>Win 98SE+</td>
+                <td>1.7</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Netscape Navigator 9</td>
+                <td>Win 98+ / OSX.2+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.0</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.1</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.1</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.2</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.2</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.3</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.3</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.4</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.4</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.5</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.5</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.6</td>
+                <td>Win 95+ / OSX.1+</td>
+                <td>1.6</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.7</td>
+                <td>Win 98+ / OSX.1+</td>
+                <td>1.7</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Mozilla 1.8</td>
+                <td>Win 98+ / OSX.1+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Gecko</td>
+                <td>Seamonkey 1.1</td>
+                <td>Win 98+ / OSX.2+</td>
+                <td>1.8</td>
+                <td>A</td>
+              </tr>
+              <tr class="gradeC">
+                <td>Tasman</td>
+                <td>Internet Explorer 5.1</td>
+                <td>Mac OS 7.6-9</td>
+                <td>1</td>
+                <td>C</td>
+              </tr>
+              <tr class="gradeC">
+                <td>Tasman</td>
+                <td>Internet Explorer 5.2</td>
+                <td>Mac OS 8-X</td>
+                <td>1</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>NetFront 3.1</td>
+                <td>Embedded devices</td>
+                <td>-</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>NetFront 3.4</td>
+                <td>Embedded devices</td>
+                <td>-</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>Dillo 0.8</td>
+                <td>Embedded devices</td>
+                <td>-</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>Links</td>
+                <td>Text only</td>
+                <td>-</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>Lynx</td>
+                <td>Text only</td>
+                <td>-</td>
+                <td>X</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>IE Mobile</td>
+                <td>Windows Mobile 6</td>
+                <td>-</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>Misc</td>
+                <td>PSP browser</td>
+                <td>PSP</td>
+                <td>-</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>Other browsers</td>
+                <td>All others</td>
+                <td>-</td>
+                <td>-</td>
+                <td>U</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } elseif ($grid == 'view') { ?>
+<?php } else { ?>
+  <h1>No Content specify</h1>
+
+<?php } ?>
 @endsection
