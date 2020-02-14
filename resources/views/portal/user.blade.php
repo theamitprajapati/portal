@@ -12,48 +12,45 @@
         <div class="panel-body bg-white">
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-              <form role="form" class="form-validation">
+              <form role="form" class="form-validation" action="user" method="POST">
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label class="control-label">Firstname</label>
+                      <label class="control-label">Unique</label>
                       <div class="append-icon">
-                        <input type="text" name="firstname" class="form-control" minlength="3" placeholder="Minimum 3 characters..." required>
+                        <input type="text" readonly name="unique" class="form-control" minlength="3" placeholder="Minimum 3 characters..." value="APP<?php echo time();?>">
                         <i class="icon-user"></i>
                       </div>
                     </div>
-                  </div>
+                  </div>  
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label class="control-label">Lastname</label>
+                      <label class="control-label">Full Name</label>
                       <div class="append-icon">
-                        <input type="text" name="lastname" class="form-control" minlength="4" placeholder="Minimum 4 characters..." required>
+                        <input type="text" name="full_name" class="form-control" minlength="3" placeholder="Minimum 3 characters..." >
                         <i class="icon-user"></i>
                       </div>
                     </div>
-                  </div>
+                  </div>                 
                 </div>
                 <div class="row">
                   <div class="col-sm-6">
                     <div class="form-group">
                       <label class="control-label">Email Address</label>
                       <div class="append-icon">
-                        <input type="email" name="email" class="form-control" placeholder="Enter your email..." required>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email..." >
                         <i class="icon-envelope"></i>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <label class="control-label">Choose your language</label>
+                      <label class="control-label">Choose your Gender</label>
                       <div class="option-group">
-                        <select id="language" name="language" class="language" required>
-                          <option value="">Select language...</option>
-                          <option value="EN">English</option>
-                          <option value="FR">French</option>
-                          <option value="SP">Spanish</option>
-                          <option value="CH">Chinese</option>
-                          <option value="JP">Japanese</option>
+                        <select id="gender" name="gender" class="language" required>
+                          <option value="">Select Gender...</option>
+                          <option value="1">Male</option>
+                          <option value="0">Female</option>                        
                         </select>
                       </div>
                     </div>
@@ -64,7 +61,7 @@
                     <div class="form-group">
                       <label class="control-label">Phone Number</label>
                       <div class="append-icon">
-                        <input type="text" name="mobile" class="form-control" placeholder="Mobile Number..." minlength="3" required>
+                        <input type="text" name="mobile" class="form-control" placeholder="Mobile Number..." minlength="3" >
                         <i class="icon-screen-smartphone"></i>
                       </div>
                     </div>
@@ -75,7 +72,7 @@
                       <div class="file">
                         <div class="option-group">
                           <span class="file-button btn-primary">Choose File</span>
-                          <input type="file" class="custom-file" name="avatar" id="avatar" onchange="document.getElementById('uploader').value = this.value;" required>
+                          <input type="file" class="custom-file" name="avatar" id="avatar" onchange="document.getElementById('uploader').value = this.value;" >
                           <input type="text" class="form-control" id="uploader" placeholder="no file selected" readonly="">
                         </div>
                       </div>
@@ -87,7 +84,7 @@
                     <div class="form-group">
                       <label class="control-label">Password</label>
                       <div class="append-icon">
-                        <input type="password" name="password" id="password" class="form-control" placeholder="Between 4 and 16 characters" minlength="4" maxlength="16" required>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Between 4 and 16 characters" minlength="4" maxlength="16" >
                         <i class="icon-lock"></i>
                       </div>
                     </div>
@@ -96,7 +93,7 @@
                     <div class="form-group">
                       <label class="control-label">Repeat your password</label>
                       <div class="append-icon">
-                        <input type="password" name="password2" id="password2" class="form-control" placeholder="Must be equal to your first password..." minlength="4" maxlength="16" required>
+                        <input type="password" name="password2" id="password2" class="form-control" placeholder="Must be equal to your first password..." minlength="4" maxlength="16" >
                         <i class="icon-lock"></i>
                       </div>
                     </div>
@@ -115,7 +112,7 @@
                       <div class="option-group">
                         <div class="checkbox checkbox-primary">
                           <label>
-                            <input type="checkbox" name="terms" id="terms" class="md-checkbox" required />
+                            <input type="checkbox" name="terms" id="terms" class="md-checkbox"  />
                             I agree with terms and conditions
                           </label>
                         </div>

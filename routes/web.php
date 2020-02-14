@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'portal'], function() {
     Route::get('dashboard','Portal@index');
-    Route::get('user','User@index');
+    Route::any('user','User@index');
 });
 
 Route::get('Welcome','Welcome@index');
